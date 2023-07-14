@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/logIn.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>LogIn</title>
+</head>
+<body>
+    <section class="containerLogIn">
+        <div class="close">
+            <a href="index.html">X</a>
+        </div>
+
+        <h1>LogIn</h1>
+
+        <section class="containerImg">
+            <img src="img/usuario.png" alt="User by Aldo Cervantes">
+        </section>
+        
+
+        <section class="formContainer">
+            <section class="dataIn">
+                <input type="text" class="input" id="user" placeholder=" ">
+                <label for="user" class="label">Usuario:</label>
+            </section>
+
+            <section class="dataIn">
+                <button class="passwordShow" id="passwordHiden"></button>
+                <input type="password" class="input" id="password" pattern=".{6,}" placeholder=" ">
+                <label for="password" class="label">Contraseña:</label>
+            </section>
+        </section>
+            
+        <p class="error">*El usuario o la contraseña <br> son incorrectos</p>
+        
+        <button id="enter">LogIn</button>
+
+        <div class="createUser">
+            <p>¿Aun no tiene un usuario?</p>
+            <a href="signUp.html">SingUn</a>
+        </div>
+        
+        
+    </section>
+</body>
+</html>

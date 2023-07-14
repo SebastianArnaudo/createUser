@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Home</title>
+</head>
+<body>
+    
+<!-- Agregar seguidores, seguidos, publicaciones y un boton de follow -->
+
+    <section class="containerHome">
+
+        <div class="close">
+            <a href="index.html">X</a>
+        </div>
+
+        <section class="containerImg">
+            <img src="img/usuario.png" alt="User by Aldo Cervantes">
+        </section>
+        
+
+        <section class="data">
+            
+            <div class="dataTable">
+                <p class="info" id="nombre">{{user.name}}</p>
+                <label class ="label" for="nombre">Nombre:</label>
+            </div>
+            <div class="dataTable">
+                <p class="info" id="apellido">{{user.lastName}}</p>
+                <label class="label" for="apellido">Apellido:</label>
+            </div>
+            <div class="dataTable">
+                <p class="info" id="birthday">{{user.birthbay}}</p>
+                <label class="label" for="birthday">Fecha de Nacimiento:</label>
+            </div>
+            <div class="dataTable">
+                <p class="info" id="placeBirth">{{user.placeBirth}}</p>
+                <label class="label" for="placeBirth">Lugar de Nacimiento:</label>
+            </div>
+            <div class="dataTable">
+                <p class="info" id="Email">{{user.mail}}</p>
+                <label class="label" for="Email">E-mail:</label>
+            </div>            
+        </section>
+
+        <section class="links">
+            <a href="editUser.html">Settings</a>
+            <a href="logIn.html">Change User</a>
+        </section>
+
+    </section>
+
+</body>
+</html>

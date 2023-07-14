@@ -1,0 +1,185 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 14, 14);
+    color: rgb(0, 255, 106);
+}
+
+.containerImg{
+    margin-left: 25%;
+    display: block;
+    background-color:rgb(24, 24, 24) ;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 255, 106);
+    box-shadow: 2px 2px 10px rgb(0, 255, 106);
+    width: 50%;
+}
+
+.conatinerImg, img{
+    width: 100%;
+    height: auto;
+    background-color: rgb(24, 24, 24);
+    border-radius: 50%;
+}
+
+.containerLogIn, h1{
+    text-align:center;
+    justify-content: center;
+    color: rgb(0, 255, 106);
+    padding: 1%;
+    margin: 2%;
+    display: flex;
+}
+
+.containerLogIn, button{
+    margin: 2%;
+    padding: 1%;
+    border: 0;
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 255, 106);
+    cursor: pointer;
+}
+
+.containerLogIn, button:hover{
+    color: rgb(0, 255, 106);
+    background-color: rgb(27, 27, 27);
+    box-shadow: 1px 1px 10px, -1px -1px 10px;
+}
+
+#cancel{
+    text-align: right;
+    align-items: end;
+    justify-content: end;
+}
+
+.containerLogIn, a{
+    text-align: center;
+    padding: 1%;
+    border: 0;
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 255, 106);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.containerLogIn, a:hover{
+    color: rgb(0, 255, 106);
+    background-color: rgb(27, 27, 27);
+    box-shadow: 1px 1px 10px, -1px -1px 10px;
+}
+
+.close{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top:2%;
+}
+
+.createUser{
+    margin: 1%;
+    line-height: 200%;
+}
+
+.containerLogIn{
+    display: block;
+    padding: 1%;
+    width: 300px;
+    max-width: 100%;
+    min-width: 50%;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;  
+    text-align: center;
+    border: 1px solid rgb(0, 255, 106);
+    border-radius: .5rem;
+    box-shadow: 2px 2px 10px rgb(0, 255, 106);
+}
+
+.formContainer{
+    margin: 2%;
+    display: grid;
+    gap: 1.5em;
+}
+
+.dataIn{
+    position: relative;
+}
+
+.input{
+    padding: 2%;
+    width: 100%;
+    background-color:rgb(0, 0, 0);
+    border: 0;
+    color: rgb(0, 255, 106);
+    border-bottom: 1px solid rgb(0, 255, 106);
+    outline: none;
+}
+
+.label{
+    color: rgb(0, 255, 106);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+}
+
+.passwordHiden{
+    width: auto;
+    height: auto;
+    background-image: url(/img/esconder.png);
+    position: absolute;
+    right: 5px;
+    background-size:cover;
+}
+
+.passwordHiden:hover{
+    background-color:rgb(0, 204, 85);
+    box-shadow: 2px 2px 10px rgb(0, 204, 85);
+}
+
+.passwordShow{
+    width: auto;
+    height: auto;
+    background-image: url(/img/ver.png);
+    position: absolute;
+    right: 5px;
+    background-size:cover;
+}
+
+.passwordShow:hover{
+    background-color:rgb(0, 204, 85);
+    box-shadow: 2px 2px 10px rgb(0, 204, 85);
+}
+
+.inputError{
+    color: red;
+    border-color: red;
+    box-shadow: 0px 2px 10px red;
+} 
+
+.labelError{
+    color: red;
+} 
+
+
+.error{
+    display: none;
+}
+
+.errorActiv{
+    padding: 1%;
+    color: red;
+}
+
+.createUser{
+    padding: 1%;
+    border: 0;
+}
