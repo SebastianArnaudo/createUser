@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/logIn.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>LogIn</title>
 </head>
 <body>
@@ -16,33 +17,34 @@
         <h1>LogIn</h1>
 
         <section class="containerImg">
-            <img src="img/usuario.png" alt="User by Aldo Cervantes">
+            <img src="img/userIcon.png" alt="UserIcon">
         </section>
         
 
-        <section class="formContainer">
+        <form class="formContainer" id="form">
             <section class="dataIn">
-                <input type="text" class="input" id="user" placeholder=" ">
-                <label for="user" class="label">Usuario:</label>
+                <input type="text" class="input" id="userInput" placeholder=" ">
+                <label for="userInput" class="label" id="userLabel">Usuario:</label>
             </section>
 
             <section class="dataIn">
-                <button class="passwordShow" id="passwordHiden"></button>
-                <input type="password" class="input" id="password" pattern=".{6,}" placeholder=" ">
-                <label for="password" class="label">Contraseña:</label>
+                <span class="material-symbols-outlined" id="eye">visibility</span>
+                <input type="password" class="input" id="passwordInput" placeholder=" ">
+                <label for="passwordInput" class="label" id="passwordLabel">Contraseña:</label>
             </section>
-        </section>
+        </form>
             
-        <p class="error">*El usuario o la contraseña <br> son incorrectos</p>
+        <p  id="error" class="error"></p>
         
-        <button id="enter">LogIn</button>
+        <button class="enterDisabled" id="enter" disabled>LogIn</button>
 
         <div class="createUser">
             <p>¿Aun no tiene un usuario?</p>
             <a href="signUp.html">SingUn</a>
         </div>
         
-        
     </section>
+
+    <script src="js/login.js"></script>
 </body>
 </html>

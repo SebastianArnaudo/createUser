@@ -5,88 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/editUser.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>User Settings</title>
 </head>
 <body>
     <section class="containerEditUser">
 
-        <section class="addImgModal" id="imgModal">
+        <section class="modalWindow" id="imgModal">
             <section class="addImg" id="addImg">
                 
-                <button class="btn" id="cancelImg">X</button> 
+                <button class="enter" id="cancelImg">X</button> 
 
                 <section class="imgPreVew">
-                    <img src="img/usuario.png" alt="User by Aldo Cervantes">
+                    <img src="img/userIcon.png" alt="User by Aldo Cervantes">
                 </section>
     
                 <section class="dataIn">
-                    <input type="image" class="input" id="imgInput" placeholder=" ">
-                    <label for="imgInput" class="label">Ingrese una imagen:</label>
+                    <input type="image" class="dataInput" id="imgInput" placeholder=" ">
+                    <label class="dataLabel" for="imgInput">Ingrese una imagen:</label>
                 </section>
 
-                <button class="btn" id="enterImg">Comfirm</button>
+                <button class="enter" id="enterImg">Comfirm</button>
+                
+            </section>
+        </section>
+
+        <section class="modalWindow" id="editPassModal">
+            <section class="addPassword">
+                
+                <button class="enter" id="cancelPass">X</button> 
+
+                <section class="dataIn">
+                    <span class="material-symbols-outlined" id="eye1">visibility</span>
+                    <input type="password" class="dataInput" id="actualPassword" placeholder=" ">
+                    <label for="actualPassword" class="dataPLabel" id="passwordLabel">Contraseña actual:</label>
+                    <p class="error" id="pPassword">*La contraseña es incorrecta</p>
+                </section>
+
+                <section class="dataIn">
+                    <span class="material-symbols-outlined" id="eye2">visibility</span>
+                    <input type="password" class="dataInput" id="newPassword" placeholder=" ">
+                    <label for="newPassword" class="dataPLabel" id="newPasswordLabel">Nueva contraseña:</label>
+                    <p class="error" id="pNPassword">*La contraseña debe tener al menos seis caracteres</p>
+                </section>
+    
+                <section class="dataIn">
+                    <span class="material-symbols-outlined" id="eye3">visibility</span>
+                    <input type="password" class="dataInput" id="confirmNewPassword" placeholder=" ">
+                    <label for="confirmNewPassword" class="dataPLabel" id="confirmNewPasswordLabel">Comfirmar contraseña:</label>
+                    <p class="error" id="pConfirmPassword">*Las contraseñas ingresadas no coinciden</p>
+                </section>
+
+                <button class="enter" id="enterPass">Comfirm</button>
                 
             </section>
         </section>
 
         <section class="containerImg">
-            <button href="#"></button>
-            <img src="img/usuario.png" alt="User by Aldo Cervantes">
+            <button href="#" id="openModal"></button>
+            <img src="img/userIcon.png" alt="UserIcon">
         </section>
 
-        <section class="formContainer">
+        <form class="form" id="form">
             <section class="dataIn">
-                <input type="text" class="input" id="user" placeholder=" " value={{user.user}}>
-                <label for="user" class="label">Usuario:</label>
-                <p class="errorActiv">*El usuario debe tener al menos cinco caracteres</p>
+                <input type="text" class="dataInput"  id="userInput" placeholder="{{user.userName}}" value=>
+                <label class="dataLabel" id="userLabel" for="user">Usuario:</label>
+                <p class="error" id="userP">*El usuario debe tener al menos cinco caracteres</p>
+            </section>
+
+
+            <section class="dataIn">
+                <span class="material-symbols-outlined" id="openPModal">lock_reset</span>
+                <input type="password" class="dataInput" id="confirmPassword" disabled>
+                <label class="dataLabel" for="confirmPassword">Contraseña:</label>
             </section>
 
             <section class="dataIn">
-                <button class="passwordHiden" id="passwordHiden"></button>
-                <input type="password" class="input" id="password" pattern=".{6,}" placeholder=" ">
-                <label for="password" class="label">Contraseña:</label>
-                <p class="errorActiv">*La contraseña debe tener al menos seis caracteres</p>
-            </section>
-
-            <section class="dataIn">
-                <button class="passwordHiden" id="passwordHiden"></button>
-                <input type="password" class="input" id="confirmPassword" pattern=".{6,}" placeholder=" ">
-                <label for="confirmPassword" class="label">Comfirm. contraseña:</label>
-                <p class="errorActiv">*Las contraseñas ingresadas no coinciden</p>
-            </section>
-
-            <section class="dataIn">
-                <input type="text" class="input" id="E-mail" placeholder=" " value={{user.mail}}>
-                <label for="E-mail" class="label">E-mail:</label>
+                <input type="text" class="dataInput" id="E-mail" placeholder="{{user.mail}}">
+                <label class="dataLabel" for="E-mail">E-mail:</label>
             </section>
 
             
             <div class="dataIn">
-                <input type="text" class="input" id="nombre" placeholder=" " value={{user.name}}>
-                <label class ="label" for="nombre">Nombre:</label>
+                <input type="text" class="dataInput" id="nombre" placeholder="{{user.name}}">
+                <label class="dataLabel" for="nombre">Nombre:</label>
             </div>
             <div class="dataIn">
-                <input type="text" class="input" id="apellido" placeholder=" " value={{user.lastName}}>
-                <label class="label" for="apellido">Apellido:</label>
+                <input type="text" class="dataInput" id="apellido" placeholder="{{user.lastName}}">
+                <label class="dataLabel" for="apellido">Apellido:</label>
             </div>
 
             <section class="dataIn">
-                <input type="date" class="input" id="birthbay" placeholder=" " value={{user.birthday}}>
-                <label for="birthbay" class="label">Fecha de Nacimiento:</label>
-                <p class="errorActiv">*Fecha Invalida</p>
+                <input type="text" class="dataInput" id="placeResidence" placeholder="{{user.placeResidence}}">
+                <label for="placeResidence" class="dataLabel">Residencia:</label>
             </section>
-
-            <section class="dataIn">
-                <input type="text" class="input" id="placeBirth" placeholder=" " value={{user.placeBirth}}>
-                <label for="placeBirth" class="label">Lugar de Nacimiento:</label>
-            </section>
-        </section>
+        </form>
         
-        <button class="btn" id="enter">Comfirm</button> 
+        <button class="enter" id="enter">Comfirm</button> 
         <div class="close">
             <a href="home.html">Cancel</a>
         </div>
     </section>
 
+    <script src="js/editar.js"></script>
 </body>
 </html>

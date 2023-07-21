@@ -7,22 +7,27 @@ body{
     color: rgb(0, 255, 106);
 }
 
+/* Imagen de tarjeta */
 .containerImg{
     margin-left: 25%;
     display: block;
     background-color:rgb(24, 24, 24) ;
-    border-radius: 50%;
+    border-radius: 100%;
     border: 5px solid rgb(0, 255, 106);
     box-shadow: 2px 2px 10px rgb(0, 255, 106);
     width: 50%;
 }
 
 .conatinerImg, img{
+    border: 0;
+    padding: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: rgb(24, 24, 24);
     border-radius: 50%;
 }
+
+/* contenido general de tarjeta */
 
 .containerLogIn, h1{
     text-align:center;
@@ -33,7 +38,7 @@ body{
     display: flex;
 }
 
-.containerLogIn, button{
+.enter{
     margin: 2%;
     padding: 1%;
     border: 0;
@@ -42,10 +47,18 @@ body{
     cursor: pointer;
 }
 
-.containerLogIn, button:hover{
+.enter:hover{
     color: rgb(0, 255, 106);
     background-color: rgb(27, 27, 27);
     box-shadow: 1px 1px 10px, -1px -1px 10px;
+}
+
+.enterDisabled{
+    margin: 2%;
+    padding: 1%;
+    border: 0;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 255, 106, 0.658);
 }
 
 #cancel{
@@ -131,32 +144,26 @@ body{
     transform-origin: left top;
 }
 
-.passwordHiden{
+.material-symbols-outlined{
+    border-radius: 50%;
     width: auto;
     height: auto;
-    background-image: url(/img/esconder.png);
     position: absolute;
-    right: 5px;
-    background-size:cover;
+    right: 10px;
+    cursor: pointer;
 }
-
-.passwordHiden:hover{
-    background-color:rgb(0, 204, 85);
+.material-symbols-outlined:hover{
     box-shadow: 2px 2px 10px rgb(0, 204, 85);
 }
 
-.passwordShow{
-    width: auto;
-    height: auto;
-    background-image: url(/img/ver.png);
-    position: absolute;
-    right: 5px;
-    background-size:cover;
+.eyeError{
+    color: red;
 }
-
-.passwordShow:hover{
-    background-color:rgb(0, 204, 85);
-    box-shadow: 2px 2px 10px rgb(0, 204, 85);
+.eyeError{
+    box-shadow: 2px 2px 10px red;
+}
+.eyeError:hover{
+    box-shadow: 2px 2px 10px red;
 }
 
 .inputError{
@@ -175,6 +182,7 @@ body{
 }
 
 .errorActiv{
+    display: block;
     padding: 1%;
     color: red;
 }

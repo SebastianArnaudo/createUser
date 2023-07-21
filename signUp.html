@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/signUp.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>signUp</title>
 </head>
 <body>
@@ -14,10 +15,10 @@
         <section class="addImgModal" id="imgModal">
             <section class="addImg" id="addImg">
                 
-                <button class="btn" id="cancelImg">X</button> 
+                <button class="enter" id="cancelImg">X</button> 
 
                 <section class="imgPreVew">
-                    <img src="img/usuario.png" alt="User by Aldo Cervantes">
+                    <img src="img/userIcon.png" alt="UserIcon">
                 </section>
     
                 <section class="dataIn">
@@ -25,69 +26,70 @@
                     <label for="imgInput" class="label">Ingrese una imagen:</label>
                 </section>
 
-                <button class="btn" id="enterImg">Comfirm</button>
+                <button class="enter" id="enterImg">Comfirm</button>
                 
             </section>
         </section>
 
         <section class="containerImg">
-            <button href="#"></button>
-            <img src="img/usuario.png" alt="User by Aldo Cervantes">
+            <button href="#" id="openModal"></button>
+            <img src="img/userIcon.png" alt="UserIcon">
         </section>
 
-        <section class="formContainer">
+        <form class="form" id="form">
             <section class="dataIn">
                 <input type="text" class="input" id="user" placeholder=" ">
-                <label for="user" class="label">Usuario:</label>
-                <p class="errorActiv">*El usuario debe tener al menos cinco caracteres</p>
+                <label for="user" class="label" id="userLabel">Usuario:</label>
+                <p class="error" id="pUser">*El usuario debe tener al menos cinco caracteres</p>
             </section>
 
             <section class="dataIn">
-                <button class="passwordHiden" id="passwordHiden"></button>
-                <input type="password" class="input" id="password" pattern=".{6,}" placeholder=" ">
-                <label for="password" class="label">Contraseña:</label>
-                <p class="errorActiv">*La contraseña debe tener al menos seis caracteres</p>
+                <span class="material-symbols-outlined" id="eye1">visibility</span>
+                <input type="password" class="input" id="password" placeholder=" ">
+                <label for="password" class="label" id="passwordLabel">Contraseña:</label>
+                <p class="error" id="pPassword">*La contraseña debe tener al menos seis caracteres</p>
             </section>
 
             <section class="dataIn">
-                <button class="passwordHiden" id="passwordHiden"></button>
-                <input type="password" class="input" id="confirmPassword" pattern=".{6,}" placeholder=" ">
-                <label for="confirmPassword" class="label">Comfirmar contraseña:</label>
-                <p class="errorActiv">*Las contraseñas ingresadas no coinciden</p>
+                <span class="material-symbols-outlined" id="eye2">visibility</span>
+                <input type="password" class="input" id="confirmPassword" placeholder=" ">
+                <label for="confirmPassword" class="label" id="confirmPasswordLabel">Comfirmar contraseña:</label>
+                <p class="error" id="pConfirmPassword">*Las contraseñas ingresadas no coinciden</p>
             </section>
 
             <section class="dataIn">
-                <input type="text" class="input" id="E-mail" placeholder=" ">
+                <input type="text" class="input" id="email" placeholder=" ">
                 <label for="E-mail" class="label">E-mail:</label>
             </section>
 
             
             <div class="dataIn">
-                <input type="text" class="input" id="nombre" placeholder=" ">
-                <label class ="label" for="nombre">Nombre:</label>
+                <input type="text" class="input" id="nam" placeholder=" ">
+                <label class ="label" for="nam">Nombre:</label>
             </div>
             <div class="dataIn">
-                <input type="text" class="input" id="apellido" placeholder=" ">
-                <label class="label" for="apellido">Apellido:</label>
+                <input type="text" class="input" id="lastName" placeholder=" ">
+                <label class="label" for="lastName">Apellido:</label>
             </div>
 
             <section class="dataIn">
-                <input type="date" class="input" id="birthbay" placeholder=" ">
-                <label for="birthbay" class="label">Fecha de Nacimiento:</label>
-                <p class="errorActiv">*Fecha Invalida</p>
+                <input type="date" class="input" id="birthday" placeholder=" ">
+                <label for="birthday" class="label" id="birthdayLabel">Fecha de Nacimiento:</label>
+                <p class="error" id="pBirthday"></p>
             </section>
 
             <section class="dataIn">
-                <input type="text" class="input" id="placeBirth" placeholder=" ">
-                <label for="placeBirth" class="label">Lugar de Nacimiento:</label>
+                <input type="text" class="input" id="placeResidence" placeholder=" ">
+                <label for="placeResidence" class="label">Lugar de Recidencia:</label>
             </section>
-        </section>
+        </form>
         
-        <button class="btn" id="enter">Comfirm</button> 
+        <button class="enterDisabled" id="enter" disabled>Comfirm</button>
         <div class="close">
             <a href="logIn.html">Cancel</a>
         </div>
     </section>
 
+    <script src="js/singUp.js"></script>
 </body>
 </html>
