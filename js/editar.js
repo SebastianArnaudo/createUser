@@ -1,26 +1,46 @@
 /* modal img */
 
-const modalImgWindow = document.getElementById("imgModal"); //contenedor principal de la ventana "imgModal"
-const modalImgOff = document.getElementById("cancelImg"); //boton para cerrar ventana
-const imgUser = document.getElementById("imgInput").value; //valor del input de imagen
-const saveImg = document.getElementById("enterImg"); //boton para guardar la imagen
-const modalImgOn = document.getElementById("openModal"); //boton para abrir modal
+// const modalImgWindow = document.getElementById("imgModal"); //contenedor principal de la ventana "imgModal"
+// const modalImgOff = document.getElementById("cancelImg"); //boton para cerrar ventana
+// const imgUser = document.getElementById("imgInput").value; //valor del input de imagen
+// const saveImg = document.getElementById("enterImg"); //boton para guardar la imagen
+// const modalImgOn = document.getElementById("openModal"); //boton para abrir modal
 
-//abrimos ventana cambaidno el display
-modalImgOn.addEventListener("click", ()=>{
-    modalImgWindow.style.display = "flex"
-});
+// //abrimos ventana cambaidno el display
+// modalImgOn.addEventListener("click", ()=>{
+//     modalImgWindow.style.display = "flex"
+// });
 
-//cerramos la ventana cambiando el display
-modalImgOff.addEventListener("click", ()=>{
-    modalImgWindow.style.display = "none"
-});
+// //cerramos la ventana cambiando el display
+// modalImgOff.addEventListener("click", ()=>{
+//     modalImgWindow.style.display = "none"
+// });
 
-//guardamos la imagen a una variable que luego pasaremos a la base y cerramos la ventana
-saveImg.addEventListener("click", ()=>{
-    const img = imgUser;
-    modalImgWindow.style.display = "none"
-    return img;
+// //guardamos la imagen a una variable que luego pasaremos a la base y cerramos la ventana
+// saveImg.addEventListener("click", ()=>{
+//     const img = imgUser;
+//     modalImgWindow.style.display = "none"
+//     return img;
+// });
+
+
+/* edit img */
+
+
+const file = document.getElementById("photo");
+const img = document.getElementById("img");
+const defaultFile = "img/userIcon.png";
+
+file.addEventListener("change", e =>{
+    if(e.target.files[0]){
+        const reader = new FileReader();
+        reader.onload = function(e){ 
+        img.src = e.target.result;
+        }
+        reader.readAsDataURL(e.target.files[0])
+    } else{
+        img.src=defaultFile;
+    }
 });
 
 /* modal password */
@@ -183,6 +203,15 @@ showConfirmPass.addEventListener("click", ()=> {
         confirmPassInput.type = "password";
     }
 });
+
+/*Redireccion*/
+
+const cancel =document.getElementById("cancel");
+cancel.addEventListener("click", close);
+
+function close(){
+    window.location.href='home.html';
+}
 
 /*Editar Usuario */
 

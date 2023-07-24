@@ -12,28 +12,10 @@
     
     <section class="containerSignUn">
 
-        <section class="addImgModal" id="imgModal">
-            <section class="addImg" id="addImg">
-                
-                <button class="enter" id="cancelImg">X</button> 
-
-                <section class="imgPreVew">
-                    <img src="img/userIcon.png" alt="UserIcon">
-                </section>
-    
-                <section class="dataIn">
-                    <input type="image" class="input" id="imgInput" placeholder=" ">
-                    <label for="imgInput" class="label">Ingrese una imagen:</label>
-                </section>
-
-                <button class="enter" id="enterImg">Comfirm</button>
-                
-            </section>
-        </section>
-
         <section class="containerImg">
-            <button href="#" id="openModal"></button>
-            <img src="img/userIcon.png" alt="UserIcon">
+            <label id="editImg" for="photo"></label>
+            <img src="img/userIcon.png" alt="UserIcon" id="img">
+            <input type="file" id="photo" accept="image/*">
         </section>
 
         <form class="form" id="form">
@@ -86,7 +68,7 @@
         
         <button class="enterDisabled" id="enter" disabled>Comfirm</button>
         <div class="close">
-            <a href="logIn.html">Cancel</a>
+            <button class="cancel" id="cancel">Cancel</button>
         </div>
     </section>
 

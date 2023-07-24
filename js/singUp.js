@@ -1,26 +1,21 @@
-/* ventana modal */
-const modalWindow = document.getElementById("imgModal"); //contenedor general de la ventana modal
-const modalOff = document.getElementById("cancelImg"); //boton de cierre
-const imgUser = document.getElementById("imgInput").value; //input de img
-const saveImg = document.getElementById("enterImg"); //boton de guardado
-const modalOn = document.getElementById("openModal"); //boton para abrir modal
+/* ingresar imagen */
 
-//se cambia el display de la ventana al apretar el boton para mostrarla
-modalOn.addEventListener("click", ()=>{
-    modalWindow.style.display="flex"
+const file = document.getElementById("photo");
+const img = document.getElementById("img");
+const defaultFile = "img/userIcon.png";
+
+file.addEventListener("change", e =>{
+    if(e.target.files[0]){
+        const reader = new FileReader();
+        reader.onload = function(e){ 
+        img.src = e.target.result;
+        }
+        reader.readAsDataURL(e.target.files[0])
+    } else{
+        img.src=defaultFile;
+    }
 });
 
-//se cambia el display de la ventana al apretar el boton para cerrarla
-modalOff.addEventListener("click", ()=>{
-    modalWindow.style.display="none"
-});
-
-//se guarda la imagen y se cierra automaticamente la ventana modal
-saveImg.addEventListener("click", ()=>{
-    const img= imgUser;
-    modalWindow.style.display="none"
-    return img;
-});
 
 /* ver contraseñas  */ 
 
@@ -234,4 +229,14 @@ function validateInput(){
     }
 
     
+}
+
+/* cancelar signIn */
+
+const cancelSI = document.getElementById("cancel");
+
+cancelSI.addEventListener("click", cancel);
+
+function cancel(){
+    window.location.href='logIn.html';
 }

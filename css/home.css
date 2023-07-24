@@ -111,3 +111,20 @@ a:hover{
     background-color: rgb(27, 27, 27);
     box-shadow: 1px 1px 10px, -1px -1px 10px;
 }
+
+.cancel{
+    margin: 2%;
+    text-align: center;
+    padding: 1%;
+    border: 0;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 0);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cancel:hover{
+    color: rgb(255, 0, 0);
+    background-color: rgb(27, 27, 27);
+    box-shadow: 1px 1px 10px, -1px -1px 10px;
+}

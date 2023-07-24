@@ -1,3 +1,25 @@
+/* redirecciones */
+
+const cancel = document.getElementById("close");
+const signUp = document.getElementById("createUser");
+
+cancel.addEventListener("click", close);
+signUp.addEventListener("click", sign);
+
+function close(){
+    window.location.href='index.html';
+}
+
+function sign(){
+    window.location.href='signUp.html';
+}
+
+function logIn(){
+    window.location.href='home.html';
+}
+
+/* logIn */
+
 const userData = "pepe"; //Usuario extraido de la Base de Datos.
 const passData = "pepe123"; //Contraseña extraida de la Base de Datos.
 
@@ -12,9 +34,9 @@ const form = document.querySelector("form");
 
 const alerta = document.getElementById("error"); //Parrafo donde se cominca si hay algun error.
 
-const logIn = document.getElementById("enter"); //Boton para ingresar.
+const login = document.getElementById("enter"); //Boton para ingresar.
 
-logIn.addEventListener("click", () => main()); //Cuando se preciona el boton para iniciar secion se ejecuta una comparacion de datos.
+login.addEventListener("click", () => main()); //Cuando se preciona el boton para iniciar secion se ejecuta una comparacion de datos.
 
 //utilizando el span del campo "password" cambiamos el tipo de input del campo, haciendo que muestre o no su contenido
 showPass.addEventListener("click", ()=> {
@@ -27,11 +49,11 @@ showPass.addEventListener("click", ()=> {
 
 function validate(){
     if (form.userInput.value != "" && form.passwordInput.value != ""){
-        logIn.disabled=false;
-        logIn.classList.replace("enterDisabled","enter")
+        login.disabled=false;
+        login.classList.replace("enterDisabled","enter")
     } else{
-        logIn.disabled=true;
-        logIn.classList.replace("enter","enterDisabled")
+        login.disabled=true;
+        login.classList.replace("enter","enterDisabled")
     }
 }
 
@@ -98,10 +120,11 @@ function main(){
         }
         else{
             /*Si todo es correcto se ingresa al "perfil" del usuario*/
-            console.log("Funciona!")
+            logIn()
             errorBack()
         }
     }
     
     return compare()
 }
+

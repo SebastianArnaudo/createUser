@@ -11,10 +11,10 @@
 <body>
     <section class="containerEditUser">
 
-        <section class="modalWindow" id="imgModal">
+        <!-- <section class="modalWindow" id="imgModal">
             <section class="addImg" id="addImg">
                 
-                <button class="enter" id="cancelImg">X</button> 
+                <button class="cancel" id="cancelImg">X</button> 
 
                 <section class="imgPreVew">
                     <img src="img/userIcon.png" alt="User by Aldo Cervantes">
@@ -28,12 +28,12 @@
                 <button class="enter" id="enterImg">Comfirm</button>
                 
             </section>
-        </section>
+        </section> -->
 
         <section class="modalWindow" id="editPassModal">
             <section class="addPassword">
                 
-                <button class="enter" id="cancelPass">X</button> 
+                <button class="cancel" id="cancelPass">X</button> 
 
                 <section class="dataIn">
                     <span class="material-symbols-outlined" id="eye1">visibility</span>
@@ -62,8 +62,9 @@
         </section>
 
         <section class="containerImg">
-            <button href="#" id="openModal"></button>
-            <img src="img/userIcon.png" alt="UserIcon">
+            <label id="insertImg" for="photo"></label>
+            <img src="img/userIcon.png" alt="UserIcon" id="img">
+            <input type="file" id="photo" accept="image/*">
         </section>
 
         <form class="form" id="form">
@@ -103,7 +104,7 @@
         
         <button class="enter" id="enter">Comfirm</button> 
         <div class="close">
-            <a href="home.html">Cancel</a>
+            <button class="cancel" id="cancel">Cancel</button>
         </div>
     </section>
 
